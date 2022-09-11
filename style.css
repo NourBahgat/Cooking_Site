@@ -4,6 +4,7 @@
   --bg-primary: rgb(226, 183, 147);
   --bg-secondary: rgb(255, 244, 234);
   --bg-hover: rgba(255, 198, 151, 0.7);
+  --transition-speed: 0.5s;
 }
 *{
   margin: 0;
@@ -29,7 +30,63 @@ body::-webkit-scrollbar-thumb{
   background-size: cover;
   position: relative;
 }
-nav{
+.navbar {
+  display: none;
+  position: fixed;
+  background-color: rgba(255, 244, 234, 0.5);
+  width: 100vw;
+  height: 5rem;
+  z-index: 3;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+  justify-content: space-between;
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: rgba(255, 244, 234, 0.7);
+  color: var(--text-secondary);
+}
+
+.nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.fa-primary {
+  color: #ff7eee;
+}
+
+.fa-secondary {
+  color: #e047ad;
+}
+
+.fa-primary,
+.fa-secondary {
+  transition: var(--transition-speed);
+}
+
+/* Header Navigation */
+.nav-head{
   display: flex;
   padding: 2% 6%;
   justify-content: space-between;
@@ -100,21 +157,24 @@ nav{
 }
 
 @media(max-width: 700px){
+  main {
+    margin-bottom: 5rem;
+    padding: 1rem;
+  }
   .intro_text h1{
     font-size: 20px;
   }
-  .nav-links ul li{
-    display:block;
+  .navbar {
+    display: block;
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
   }
-  .nav-links{
-    position: absolute;
-    background:var(--bg-primary);
-    height: 100vh;
-    width: 200px;
-    top: 0;
-    right: 0;
-    text-align: left;
-    z-index: 2;
+  .nav-link {
+    justify-content: center;
+  }
+  .nav-head{
+    display: none;
   }
 }
 .content{
@@ -123,11 +183,11 @@ nav{
   text-align: center;
   padding-top: 100px;
 }
-.content h1{
+h1{
   font-size: 36px;
   font-weight: 600;
 }
-.content p{
+p{
   color: #777;
   font-size: 14px;
   font-weight: 300;
@@ -217,8 +277,17 @@ h3{
   bottom: 49%;
   opacity: 1;
 }
+@media(max-width: 700px){
+  .row{
+    flex-direction: column;
+  }
+  .layer h3{
+    opacity: 1;
+    bottom: 49%;
+  }
+}
+/* Footer */
 .footer{
-
   text-align: center;
   padding: 30px 0;
   margin: auto;
@@ -237,4 +306,9 @@ h4{
   height: 2px;
   background: var(--bg-primary);
   display: block;
+}
+@media(max-width: 700px) {
+  .footer{
+    margin-bottom: 5rem;
+  }
 }
