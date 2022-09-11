@@ -174,9 +174,6 @@ body::-webkit-scrollbar-thumb{
   transform: translate(-50%,-50%);
   text-align: center;
 }
-.intro_text h1{
-  font-size: 3rem;
-}
 .intro_text p{
   margin: 10px 0 40px;
   font-size: 14px;
@@ -208,9 +205,6 @@ body::-webkit-scrollbar-thumb{
     margin-bottom: 5rem;
     padding: 1rem;
   }
-  .intro_text h1{
-    font-size: 20px;
-  }
   .navbar {
     display: block;
     bottom: 0;
@@ -230,7 +224,7 @@ body::-webkit-scrollbar-thumb{
     font-size: 20px;
     font-weight: 700;
   }
-  intro_text p{
+  .intro_text p{
     font-size: 12px;
   }
 }
@@ -240,7 +234,7 @@ body::-webkit-scrollbar-thumb{
   text-align: center;
   padding-top: 100px;
 }
-.content h1{
+h1{
   font-size: 2.6rem;
   font-weight: 600;
 }
@@ -345,6 +339,9 @@ h3{
   .layer h3{
     opacity: 1;
     bottom: 49%;
+  }
+  h1{
+    font-size: 2rem;
   }
 }
 /* Footer */
