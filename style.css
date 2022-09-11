@@ -152,7 +152,7 @@ body::-webkit-scrollbar-thumb{
 .letter-list button:hover{
   color: var(--bg-secondary);
   text-shadow: 3px 3px 0 var(--bg-hover);
-  animation: letter 1s;
+  animation: letter 0.6s;
 }
 @keyframes letter {
   25%{
@@ -365,8 +365,33 @@ h4{
   background: var(--bg-primary);
   display: block;
 }
+.icons{
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  padding: 0 6%;
+  position: relative;
+
+}
+.icons i {
+  color: var(--bg-primary);
+  padding: 0 10px;
+  font-size: 1.3rem;
+}
+.icons i:hover{
+  transform: scale(1.1);
+  color: var(--anim-secondary);
+  transition: 0.2s;
+  cursor: pointer;
+}
 @media(max-width: 700px) {
   .footer{
     margin-bottom: 5rem;
+  }
+  .icons i {
+    padding: 0 5px;
+  }
+  .footer p {
+    font-size: 12px;
   }
 }
