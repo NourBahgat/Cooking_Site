@@ -5,6 +5,8 @@
   --bg-secondary: rgb(255, 244, 234);
   --bg-hover: rgba(255, 198, 151, 0.7);
   --transition-speed: 0.5s;
+  --anim-primary: #ff7eee;
+  --anim-secondary: #e047ad;
 }
 *{
   margin: 0;
@@ -118,6 +120,51 @@ body::-webkit-scrollbar-thumb{
 .nav-links ul li:hover::after{
   width: 100%;
 }
+.letter-box{
+  height: 4rem;
+  width: 36.5rem;
+  color: #fff;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  margin-bottom: 1rem;
+}
+.letter-list{
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 0%;
+  position: fixed;
+  display: flex;
+}
+.letter-list button{
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  display: flex;
+}
+.letter-list button h1{
+  font-size: 2.6rem;
+}
+
+.letter-list button:hover{
+  color: var(--bg-secondary);
+  text-shadow: 3px 3px 0 var(--bg-hover);
+  animation: letter 1s;
+}
+@keyframes letter {
+  25%{
+    transform: scale(0.8,1.1);
+  }
+  50%{
+    transform: scale(1.1,0.8);
+  }
+  75%{
+    transform: scale(0.7,1.2);
+  }
+}
 .intro_text{
   width: 90%;
   color: #fff;
@@ -128,7 +175,7 @@ body::-webkit-scrollbar-thumb{
   text-align: center;
 }
 .intro_text h1{
-  font-size: 50px;
+  font-size: 3rem;
 }
 .intro_text p{
   margin: 10px 0 40px;
@@ -176,6 +223,16 @@ body::-webkit-scrollbar-thumb{
   .nav-head{
     display: none;
   }
+  .letter-box{
+    width: 20rem;
+  }
+  .letter-list button h1{
+    font-size: 20px;
+    font-weight: 700;
+  }
+  intro_text p{
+    font-size: 12px;
+  }
 }
 .content{
   width: 80%;
@@ -183,8 +240,8 @@ body::-webkit-scrollbar-thumb{
   text-align: center;
   padding-top: 100px;
 }
-h1{
-  font-size: 36px;
+.content h1{
+  font-size: 2.6rem;
   font-weight: 600;
 }
 p{
@@ -199,6 +256,10 @@ p{
   margin-top: 4%;
   display: flex;
   justify-content: space-between;
+}
+.row h1{
+  font-size: 2.6rem;
+  font-weight: 600;
 }
 .offer_col{
   flex-basis: 30%;
