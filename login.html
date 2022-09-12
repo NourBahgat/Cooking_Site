@@ -12,22 +12,90 @@
 </head>
 <body>
   <!--HEAD-->
-  <section id="head" class="header">
-    <nav class="nav-head">
-      <div class="site-logo">
-      <a href="main.html"><img width="100" src="images/tmp_logo.png"></a>
+  <section class="grid">
+    <div class="class">
+      <div id="LOGIN" class="login-class">
+        <div class="login-col">
+          <h1>Login</h1>
+          <form method="post">
+            <div class="txt_field">
+              <input type="text" required>
+              <span></span>
+              <label>Username</label>
+            </div>
+            <div class="txt_field">
+              <input type="password" required>
+              <span></span>
+              <label>Password</label>
+            </div>
+            <div class="pass">Forgot Password?</div>
+            <div class="submit-data"><input type="submit" value="Login"></div>
+            <div class="signup_link">
+              Not a member? <a href="#SIGNUP">Signup</a>
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="nav-links">
-        <ul>
-          <li><a href="#head">HOME</a></li>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#content">CONTENT</a></li>
-          <li><a href="">FAVOURITES</a></li>
-          <li><a href="">PROFILE</a></li>
-        </ul>
+    </div>
+    <div class="class">
+      <div id="SIGNUP" class="register-class">
+        <div class="register-col">
+          <h1>Register</h1>
+          <form method="post">
+            <div class="txt_field">
+              <input type="text" required>
+              <span></span>
+              <label>Username</label>
+            </div>
+            <div class="txt_field">
+              <input type="text" required>
+              <span></span>
+              <label>Email</label>
+            </div>
+            <div class="txt_field">
+              <input type="password" required>
+              <span></span>
+              <label>Password</label>
+            </div>
+            <div class="submit-data"><input type="submit" value="Sign Up"></div>
+            <div class="signup_link">
+              Already a member? <a href="#LOGIN">Login</a>
+            </div>
+          </form>
+        </div>
       </div>
-    </nav>
+    </div>
   </section>
+    <!--<div class="container">
+      <div class="register-col">
+        <h1>Register</h1>
+        <form method="post">
+          <div class="txt_field">
+            <input type="text" required>
+            <span></span>
+            <label>Username</label>
+          </div>
+          <div class="txt_field">
+            <input type="text" required>
+            <span></span>
+            <label>Email</label>
+          </div>
+          <div class="txt_field">
+            <input type="password" required>
+            <span></span>
+            <label>Password</label>
+          </div>
+          <div class="pass">Forgot Password?</div>
+          <input type="submit" value="Login">
+          <div class="signup_link">
+            Not a member? <a href="#">Signup</a>
+          </div>
+        </form>
+        <div class="login-img">
+          <img src="images/login1.jpg">
+        </div>
+      </div>
+    </div>
   <!--Footer-->
   <section id="about" class="footer">
     <div class="footer-box">
