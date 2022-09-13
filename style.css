@@ -467,8 +467,9 @@ h4{
   border: none;
 }
 .inner button:hover{
-  color: blue;
-  text-decoration: underline;
+  color: var(--anim-primary);
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 .login-col{
   opacity: 0;
@@ -585,6 +586,10 @@ input[type="submit"]:hover{
   font-size: 16px;
   font-weight: 400;
   color: #666666;
+}
+.signup_link a:hover, .login_link a:hover {
+  text-decoration: none;
+  color: var(--anim-primary);
 }
 @media(max-width: 800px) {
   .inner, .inner.active {
