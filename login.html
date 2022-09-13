@@ -12,36 +12,32 @@
 </head>
 <body>
   <!--HEAD-->
-  <section class="grid">
-    <div class="class">
-      <div id="LOGIN" class="login-class">
-        <div class="login-col">
-          <h1>Login</h1>
-          <form method="post">
-            <div class="txt_field">
-              <input type="text" required>
-              <span></span>
-              <label>Username</label>
-            </div>
-            <div class="txt_field">
-              <input type="password" required>
-              <span></span>
-              <label>Password</label>
-            </div>
-            <div class="pass">Forgot Password?</div>
-            <div class="submit-data"><input type="submit" value="Login"></div>
+  <section class="head">
+    <div class="container">
+      <div class="inner">
+         <div id="login" class="login-col">
+            <h1>Login</h1>
+            <form method="post" action="main.html">
+              <div class="txt_field">
+                <input type="text" required>
+                <span></span>
+                <label>Username</label>
+              </div>
+              <div class="txt_field">
+                <input type="password" required>
+                <span></span>
+                <label>Password</label>
+              </div>
+              <div class="pass">Forgot Password?</div>
+              <div class="submit-data"><input type="submit" value="Login"></div>
+            </form>
             <div class="signup_link">
-              Not a member? <a href="#SIGNUP">Signup</a>
+                Not a member? <button class="signupbtn"><b>Sign Up</b></button>
             </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="class">
-      <div id="SIGNUP" class="register-class">
-        <div class="register-col">
+         </div>
+         <div id="sign-up" class="register-col">
           <h1>Register</h1>
-          <form method="post">
+          <form method="post" action="main.html">
             <div class="txt_field">
               <input type="text" required>
               <span></span>
@@ -58,44 +54,14 @@
               <label>Password</label>
             </div>
             <div class="submit-data"><input type="submit" value="Sign Up"></div>
-            <div class="signup_link">
-              Already a member? <a href="#LOGIN">Login</a>
-            </div>
           </form>
+          <div class="login_link">
+            Already a member? <button class="loginbtn"><b>Login</b></button>
+          </div>
         </div>
       </div>
     </div>
   </section>
-    <!--<div class="container">
-      <div class="register-col">
-        <h1>Register</h1>
-        <form method="post">
-          <div class="txt_field">
-            <input type="text" required>
-            <span></span>
-            <label>Username</label>
-          </div>
-          <div class="txt_field">
-            <input type="text" required>
-            <span></span>
-            <label>Email</label>
-          </div>
-          <div class="txt_field">
-            <input type="password" required>
-            <span></span>
-            <label>Password</label>
-          </div>
-          <div class="pass">Forgot Password?</div>
-          <input type="submit" value="Login">
-          <div class="signup_link">
-            Not a member? <a href="#">Signup</a>
-          </div>
-        </form>
-        <div class="login-img">
-          <img src="images/login1.jpg">
-        </div>
-      </div>
-    </div>
   <!--Footer-->
   <section id="about" class="footer">
     <div class="footer-box">
@@ -116,6 +82,24 @@
   </section>
   <script>
     var scroll = new SmoothScroll('a[href*="#"]');
+  </script>
+  <script>
+    const loginbtn = document.querySelector('.loginbtn')
+    const signupbtn = document.querySelector('.signupbtn')
+    const inner = document.querySelector('.inner')
+    const logincol = document.querySelector('.login-col')
+    const registercol = document.querySelector('.register-col')
+
+    loginbtn.onclick = function() {
+      inner.classList.add('active')
+      registercol.classList.add('active')
+      logincol.classList.remove('active')
+    }
+    signupbtn.onclick = function() {
+      inner.classList.remove('active')
+      registercol.classList.remove('active')
+      logincol.classList.add('active')
+    }
   </script>
 </body>
 </html>
