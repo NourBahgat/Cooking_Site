@@ -27,12 +27,14 @@ body::-webkit-scrollbar-thumb{
   background: var(--bg-primary);
 }
 .header{
+  opacity: 1;
   min-height: 100vh;
   width: 100%;
   background-image: linear-gradient(var(--hero-heavy),var(--hero-light)),
   url(images/bg1.jpg);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   position: relative;
 }
 .navbar {
@@ -236,6 +238,9 @@ body::-webkit-scrollbar-thumb{
   }
 }
 .content{
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: #fff;
   width: 80%;
   margin: auto;
   text-align: center;
@@ -326,8 +331,10 @@ h3{
   cursor: pointer;
 }
 .layer h3{
+  left: 50%;
+  transform: translate(-53%, 0%);
   color: #fff;
-  width: 100%;
+  width: 80%;
   font-weight: 600;
   font-size: 25px;
   bottom: 0;
@@ -352,7 +359,6 @@ h3{
   }
 }
 /* Footer */
-
 .footer-box{
   background: linear-gradient(rgba(255, 244, 234, 0.1),rgba(226, 183, 147, 0.6));
   text-align: center;

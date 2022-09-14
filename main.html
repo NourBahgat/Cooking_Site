@@ -230,5 +230,12 @@
   <script>
     var scroll = new SmoothScroll('a[href*="#"]');
   </script>
+  <script>
+    const bg = document.getElementById('head');
+    const footer = document.getElementById('about');
+    window.addEventListener('scroll', function(){
+      bg.style.opacity = 1 - +window.pageYOffset/2500+'';
+    })
+  </script>
 </body>
 </html>
